@@ -1,4 +1,4 @@
-# RFM Customer segmentation analysis
+# Coffee Shop Sales Analysis and Forecasting
 
 ## About the project
 
@@ -7,21 +7,19 @@ to analyze the transaction records and provide insights to the business and pred
 
 ## Dataset Description
 
-                         Transactions of a Coffee Shop sales based in USA from 1/1/2023 to 6/30/2023.
+Transactions of a Coffee Shop sales based in USA from 1/1/2023 to 6/30/2023.
 
-
-
-transaction_id:        Unique sequential ID representing an individual transaction
-transaction_date:      Date of the transaction (MM/DD/YY)
-transaction_time:      Timestamp of the transaction (HH:MM:SS)
-transaction_qty:       Quantity of items sold
-store_id:              Unique ID of the coffee shop where the transaction took place
-store_location:        Location of the coffee shop where the transaction took place
-product_id:            Unique ID of the product sold
-unit_price:            Retail price of the product sold
-product_category:      Description of the product category
-product_type:          Description of the product type
-product_detail:        Description of the product detail
+  - transaction_id:        Unique sequential ID representing an individual transaction
+  - transaction_date:      Date of the transaction (MM/DD/YY)
+  - transaction_time:      Timestamp of the transaction (HH:MM:SS)
+  - transaction_qty:       Quantity of items sold
+  - store_id:              Unique ID of the coffee shop where the transaction took place
+  - store_location:        Location of the coffee shop where the transaction took place
+  - product_id:            Unique ID of the product sold
+  - unit_price:            Retail price of the product sold
+  - product_category:      Description of the product category
+  - product_type:          Description of the product type
+  - product_detail:        Description of the product detail
 
 
 ## Tool used 
@@ -29,6 +27,7 @@ product_detail:        Description of the product detail
  - Numpy
  - Matplotlib
  - seaborn
+ - Scikit-learn
 
 ```
 python
