@@ -29,10 +29,11 @@ Transactions of a Coffee Shop sales based in USA from 1/1/2023 to 6/30/2023.
  - seaborn
  - Scikit-learn
 
+## Data Preparation 
+ - Import libraries and Data inspection.
 ```
 python
 
-# Import libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -52,10 +53,13 @@ print(df.duplicated().sum()) #Check for duplicates values
 print(df.select_dtypes(include='number').describe())   # Check for summary statistics of numerical columns 
 
 # There are no missing and duplicated values in the dataset
+```
 
-# Feature Engineering
+
+ - Feature Engineering
 data = df.copy()  # Duplicate the dataset
 
+```
 # Add some news columns
 data['transaction_timestamp'] = data['transaction_date'].astype(str) + ' ' + data['transaction_time'].astype(str) 
 data['transaction_timestamp'] = pd.to_datetime(data['transaction_timestamp'])      # Convert the data type to datetime
@@ -69,8 +73,11 @@ data['revenue'] = data['unit_price'] * data['transaction_qty']     # Add the rev
 # Check the updated dataset
 print(data.head(10))
 print(data.info())
+```
 
-# Data exploration
+# Data Exploration
+
+```
 print(data['transaction_timestamp'].min())   # Check for earliest transaction date
 print(data['transaction_timestamp'].max())   # Check for latest transaction date
 print(data['transaction_timestamp'].value_counts().sort_index(ascending=True)) # Check the unique transaction hours from the smallest to largest
@@ -79,9 +86,11 @@ print(data['store_id'].nunique()) # Check number of uniques stores
 print(data['store_location'].unique()) # Check the unique store location
 print(data['product_category'].nunique()) # Check number of uniques product_categories
 print(data['product_type'].unique()) # Check the unique product_type
+```
 
-# Data Analysis -- Calculating KPIs
-
+# Data Analysis 
+ - Calculating KPIs
+```
 Total_orders = data['transaction_id'].count()
 print('Total_orders:' , Total_orders) # Number of transactions in the dataset
 
@@ -99,9 +108,9 @@ print('Total revenue generated from the sales:', Total_revenue) # Total revenue 
 
 Avg_order_value = Total_revenue / Total_orders
 print('Average revenue generated per order:', Avg_order_value) # Average revenue generated per order
-
-# Orders Analysis 
-
+```
+ - Orders Analysis 
+```
 # Find the total orders by transaction hours 
 hourly_orders = data.groupby(['hour'], as_index=False).agg(Total_orders=('transaction_id', 'count'))
 print(hourly_orders)
@@ -155,8 +164,6 @@ for index, values in enumerate(monthly_orders['Total_orders']):
     ax.annotate(f"{values/1000:.1f}K", xy=(index, values * 1.05), ha='center', va='bottom')
 
 plt.show()
-
-
 
 
 ```
