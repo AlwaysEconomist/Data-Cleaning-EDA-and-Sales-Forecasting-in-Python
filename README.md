@@ -23,16 +23,16 @@ Transactions of a Coffee Shop sales based in USA from 1/1/2023 to 6/30/2023.
 
 
 ## Tool used 
- - Pandas
- - Numpy
- - Matplotlib
- - seaborn
- - Scikit-learn
+ - Pandas: Data manipulation, cleaning, aggregation
+ - Numpy:  Numerical computations, array operations, efficiency
+ - Matplotlib: Data visualization, plotting, insights
+ - seaborn: Statistical graphics, trends 
+ - Scikit-learn: Machine learning, forecasting, modeling
+
 
 ## Data Preparation 
  - Import libraries and Data inspection.
 ```
-python
 
 import pandas as pd
 import numpy as np
@@ -57,9 +57,11 @@ print(df.select_dtypes(include='number').describe())   # Check for summary stati
 
 
  - Feature Engineering
-data = df.copy()  # Duplicate the dataset
 
 ```
+data = df.copy()  # Duplicate the dataset
+
+
 # Add some news columns
 data['transaction_timestamp'] = data['transaction_date'].astype(str) + ' ' + data['transaction_time'].astype(str) 
 data['transaction_timestamp'] = pd.to_datetime(data['transaction_timestamp'])      # Convert the data type to datetime
