@@ -24,10 +24,11 @@ Transactions of a Coffee Shop sales based in USA from 1/1/2023 to 6/30/2023.
 
 ## Tool used 
  - Pandas: Data manipulation, cleaning, aggregation
- - Numpy:  Numerical computations, array operations, efficiency
+ - Numpy:  Numerical computations, array operations
  - Matplotlib: Data visualization, plotting, insights
  - seaborn: Statistical graphics, trends 
  - Scikit-learn: Machine learning, forecasting, modeling
+ - VS Code: Editor
 
 
 ## Data Preparation 
