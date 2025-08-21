@@ -1,18 +1,15 @@
-#
+# RFM Customer segmentation analysis
 
+## About the project
 
-```
-python
-
-
-#About the project
-'''
 I have been hired as an Analyst by Maven Roasters, a fictitious coffee shop operating out of three NYC locations. I have been tasked
 to analyze the transaction records and provide insights to the business and predicts future sales.
 
+## Dataset Description
+
                          Transactions of a Coffee Shop sales based in USA from 1/1/2023 to 6/30/2023.
 
-Dataset Description
+
 
 transaction_id:        Unique sequential ID representing an individual transaction
 transaction_date:      Date of the transaction (MM/DD/YY)
@@ -26,7 +23,15 @@ product_category:      Description of the product category
 product_type:          Description of the product type
 product_detail:        Description of the product detail
 
-'''
+
+## Tool used 
+ - Pandas
+ - Numpy
+ - Matplotlib
+ - seaborn
+
+```
+python
 
 # Import libraries
 import pandas as pd
