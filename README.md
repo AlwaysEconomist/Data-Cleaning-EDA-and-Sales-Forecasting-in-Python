@@ -56,8 +56,6 @@ print(df.select_dtypes(include='number').describe())   # Check for summary stati
 # There are no missing and duplicated values in the dataset
 ```
 
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/7a7ff443-4042-4016-9ec0-12bfac68cd49" />
-
 
  - Feature Engineering
 
